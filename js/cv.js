@@ -3,7 +3,6 @@ $(function()
 	$(".menuItem").click(function()
 	{
 		var currentMenuItem = $(this);
-		currentMenuItem.removeClass("menuItem");
 		
 		if(currentMenuItem.hasClass("menuItemOpen"))
 		{
@@ -12,7 +11,7 @@ $(function()
 		else
 		{
 			//close all other menu
-			closeMenu($("menuItemOpen"));
+			closeMenu($(".menuItemOpen"));
 			//open current menu
 			openMenu(currentMenuItem);
 		}
@@ -23,10 +22,14 @@ function closeMenu(menuItem)
 {
 	menuItem.removeClass("menuItemOpen");
 	menuItem.addClass("menuItemClosed");
+	
+	menuItem.children(".contentItem").css("visibility", "hidden");
 }
 
 function openMenu(menuItem)
 {
 	menuItem.removeClass("menuItemClosed");
 	menuItem.addClass("menuItemOpen");
+	
+	menuItem.children(".contentItem").css("visibility", "visible");
 }
