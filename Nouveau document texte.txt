@@ -1,0 +1,9 @@
+- menu à gauches : expériences, formations, langues, divers
+Lors d'un clic sur le menu le titre du menu sort du menu avec une page en dessus qui
+contient toutes les infos
+- design intercalaires ?
+- ajout du son du papier lors que l'animation est lancée
+- derrière les coordonnées sont toujours visibles
+- mettre du javascript qui contacte le serveur puis envoie un mail
+afin d'éviter les robots qui récupère les mails
+- html 5 pour faire une enveloppe
