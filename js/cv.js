@@ -1,17 +1,30 @@
 $(function()
 {
+	var itemSize = {};
+	var menuItem = $("#itemFormation");
+	itemSize.height = parseInt(menuItem.css("height"));
+	itemSize.width = parseInt(menuItem.css("width"));
+	
+	$(".folder").each(function()
+	{
+		var folderWidth = parseInt($(this).outerWidth());
+		var top = itemSize.height;
+		var left =  itemSize.width - folderWidth;
+		$(this).css({"top" : top, "left" : left});
+	});
+
 	$(".menuItem").click(function()
 	{
 		var currentMenuItem = $(this);
 		
-		if(currentMenuItem.hasClass("menuItemOpen"))
+		if(currentMenuItem.hasClass("sheetOpen"))
 		{
 			closeMenu(currentMenuItem);
 		}
 		else
 		{
 			//close all other menu
-			closeMenu($(".menuItemOpen"));
+			closeMenu($(".sheetOpen"));
 			//open current menu
 			openMenu(currentMenuItem);
 		}
@@ -20,16 +33,18 @@ $(function()
 
 function closeMenu(menuItem)
 {
-	menuItem.removeClass("menuItemOpen");
-	menuItem.addClass("menuItemClosed");
+	menuItem.removeClass("sheetOpen");
+	menuItem.addClass("sheetClosed");
 	
-	menuItem.children(".contentItem").css("visibility", "hidden");
+	$("#folderFormation").removeClass("sheetOpen");
+	$("#folderFormation").addClass("sheetClosed");
 }
 
 function openMenu(menuItem)
 {
-	menuItem.removeClass("menuItemClosed");
-	menuItem.addClass("menuItemOpen");
+	menuItem.removeClass("sheetClosed");
+	menuItem.addClass("sheetOpen");
 	
-	menuItem.children(".contentItem").css("visibility", "visible");
+	$("#folderFormation").removeClass("sheetClosed");
+	$("#folderFormation").addClass("sheetOpen");
 }

@@ -1,9 +1,15 @@
 #menu
 {
-	width : 15%;
+	width : 200px;
 	height : 400px;
-	background-color : #f5f;
+	background-color : #f44;
 	z-index:0;
+	margin : 0px;
+}
+
+body
+{
+	margin:0px;
 }
 
 .menuItem
@@ -13,13 +19,13 @@
 	cursor: pointer;
 }
 
-.menuItemOpen
+.sheetOpen
 {
-	transform: translate(800px,0px);
+	transform: translate(902px,0px);
 	transition: transform 2s;
 }
 
-.menuItemClosed
+.sheetClosed
 {
 	transform: translate(0px,0px);
 	transition: transform 2s;
@@ -35,10 +41,9 @@
 .folder
 {
 	width:900px;
+	border: 1px solid black;
 	z-index:-30;
 	position:absolute;
-	top:0px;
-	left:-800px;
 }
 
 #itemFormation
