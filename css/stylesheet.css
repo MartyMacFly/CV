@@ -1,10 +1,11 @@
 #menu
 {
-	width : 200px;
-	height : 400px;
+	width : 250px;
+	height : 800px;
 	background-color : #f44;
 	z-index:0;
 	margin : 0px;
+	padding : 3px;
 }
 
 body
@@ -17,18 +18,21 @@ body
 	width : 100%;
 	height : 30px;
 	cursor: pointer;
+	border:1px solid black;
+	margin:2px;
+	border-radius: 10px 10px 0px 0px;
 }
 
 .sheetOpen
 {
 	transform: translate(902px,0px);
-	transition: transform 2s;
+	transition: transform 1s;
 }
 
 .sheetClosed
 {
 	transform: translate(0px,0px);
-	transition: transform 2s;
+	transition: transform 1s;
 }
 
 .headerContent
@@ -41,12 +45,81 @@ body
 .folder
 {
 	width:900px;
+	height:600px;
 	border: 1px solid black;
-	z-index:-30;
+	background-color: white;
 	position:absolute;
+}
+
+#encadre
+{
+	height:200px;
+}
+
+#header
+{
+	width:100%;
+	height:800px;
+	background-color : #ddd;
 }
 
 #itemFormation
 {
-	background-color : #e22;
+	background-color : #182;
 }
+
+#itemExperience
+{
+	background-color : #ef6;
+}
+
+#itemCompetence
+{
+	background-color : #e2e;
+}
+
+#itemCertif
+{
+	background-color : #ee2;
+}
+
+#itemLang
+{
+	background-color : #f48;
+}
+
+#itemDivers
+{
+	background-color : #b89;
+}
+
+#folderFormation
+{
+	z-index:-6;
+}
+
+#folderExperience
+{
+	z-index:-5;
+}
+
+#folderCompetence
+{
+	z-index:-4;
+}
+
+#folderCertif
+{
+	z-index:-3;
+}
+
+#folderLang
+{
+	z-index:-2;
+}
+
+#folderDivers
+{
+	z-index:-1;
+}
+
